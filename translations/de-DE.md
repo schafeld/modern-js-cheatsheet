@@ -7,7 +7,7 @@
 
 ### Motivation
 
-Dieser 'Spickzettel' enthält JavaScript wie es dir heutzutage in Projekten und aktuellen Code-Beispielen häufig begegnen wird.
+Dieser 'Spickzettel' enthält JavaScript wie es dir heutzutage in Projekten und Weiterbildungsangeboten häufig begegnen wird.
 
 Diese Anleitung ist nicht dazu gedacht, dir als Neuling JavaScript beizubringen. Stattdessen soll Entwicklern mit Grundkenntnissen geholfen werden, sich anhand der verwendeten JavaScript Konzepte mit modernen Programmiergrundlagen vertraut zu machen – z.B. um React zu lernen.
 
@@ -16,17 +16,17 @@ Gelegentlich werden persönliche Empfehlungen ausgesprochen, über die man disku
 > **Hinweis:** Die meisten hier vorgestellten Konzepte entstammen einer JavaScript Aktualisierung (ES2015, oft ES6 genannt). Neu hinzugekommene Eigenschaften sind sehr gut  [dokumentiert](http://es6-features.org). 
 
 
-### Complementary Resources
+### Weiterführende Quellen
 
-When you struggle to understand a notion, I suggest you look for answers on the following resources:
+Falls sich ein Begriff als schwierig erweist, bieten sich zusätzliche Informationsquellen an:  
 
 - [MDN (Mozilla Developer Network)](https://developer.mozilla.org/en-US/search?q=)
-- [You don't know JS (book)](https://github.com/getify/You-Dont-Know-JS)
-- [ES6 Features with examples](http://es6-features.org)
-- [WesBos blog (ES6)](http://wesbos.com/category/es6/)
-- [Javascript Basics for Beginners](https://www.udacity.com/course/javascript-basics--ud804) - a free Udacity course
+- [You don't know JS (Buch)](https://github.com/getify/You-Dont-Know-JS)
+- [ES6 Merkmale mit Beispielen](http://es6-features.org)
+- [WesBos Blog (ES6)](http://wesbos.com/category/es6/)
+- [Javascript Grundlagen für Anfänger](https://www.udacity.com/course/javascript-basics--ud804) - kostenloser Udacity Kurs
 - [Reddit (JavaScript)](https://www.reddit.com/r/javascript/)
-- [Google](https://www.google.com/) to find specific blog and resources
+- [Google](https://www.google.com/) um Blogs und Quellen zu recherchieren
 - [StackOverflow](https://stackoverflow.com/questions/tagged/javascript)
 
 ## Table of Contents
