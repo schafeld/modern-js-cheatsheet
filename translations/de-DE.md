@@ -1,4 +1,4 @@
-# Spickzettel Modernes JavaScript
+# Spickzettel Modernes Javascript
 
 ![Modern JavaScript cheatsheet](https://i.imgur.com/aexPxMb.png)
 <small>Bildquelle: [Ahmad Awais ⚡️](https://github.com/ahmadawais)</small>
@@ -7,13 +7,13 @@
 
 ### Motivation
 
-Dieser 'Spickzettel' enthält JavaScript wie es dir heutzutage in Projekten und Weiterbildungsangeboten häufig begegnen wird.
+Dieser 'Spickzettel' enthält Javascript wie es heutzutage in Projekten und Weiterbildungen häufig verwendet wird.
 
-Diese Anleitung ist nicht dazu gedacht, dir als Neuling JavaScript beizubringen. Stattdessen soll Entwicklern mit Grundkenntnissen geholfen werden, sich anhand der verwendeten JavaScript Konzepte mit modernen Programmiergrundlagen vertraut zu machen – z.B. um React zu lernen.
+Diese Anleitung ist nicht dafür gemacht, Anfängern Javascript beizubringen. Stattdessen sollen Entwickler mit vorhandenen Grundkenntnissen befähigt werden, sich anhand der verwendeten Javascript Konzepte mit modernen Programmiergrundlagen vertraut zu machen – z.B. um React zu lernen.
 
 Gelegentlich werden persönliche Empfehlungen ausgesprochen, über die man diskutieren könnte; diese sind jedoch als persönliche Tipps kenntlich gemacht.
 
-> **Hinweis:** Die meisten hier vorgestellten Konzepte entstammen einer JavaScript Aktualisierung (ES2015, oft ES6 genannt). Neu hinzugekommene Eigenschaften sind sehr gut  [dokumentiert](http://es6-features.org). 
+> **Hinweis:** Die meisten hier vorgestellten Konzepte entstammen einer Javascript Aktualisierung (ES2015, oft ES6 genannt). Neu hinzugekommene Eigenschaften sind sehr gut  [dokumentiert](http://es6-features.org). 
 
 
 ### Weiterführende Quellen
