@@ -29,13 +29,13 @@ Falls sich ein Begriff als schwierig erweist, bieten sich zusätzliche Informati
 - [Google](https://www.google.com/) um Blogs und Quellen zu recherchieren
 - [StackOverflow](https://stackoverflow.com/questions/tagged/javascript)
 
-## Table of Contents
+## Inhaltsverzeichnis
 
-- [Modern JavaScript cheatsheet](#modern-javascript-cheatsheet)
-  * [Introduction](#introduction)
+- [Spickzettel Modernes JavaScript](#modern-javascript-cheatsheet)
+  * [Einleitung](#einleitung)
     + [Motivation](#motivation)
-    + [Complementary resources](#complementary-resources)
-  * [Table of contents](#table-of-contents)
+    + [Weiterführende Quellen](#weiterführende-quellen)
+  * [Inhaltesverzeichnis](#inhaltsverzeichnis)
   * [Notions](#notions)
     + [Variable declaration: var, const, let](#variable-declaration-var-const-let)
       - [Short explanation](#short-explanation)
@@ -118,60 +118,61 @@ Falls sich ein Begriff als schwierig erweist, bieten sich zusätzliche Informati
     + [Scope](#-scope)
     + [Variable mutation](#-variable-mutation)
 
-## Notions
+## Begriffserklärung
 
-### Variable declaration: var, const, let
+### Variablendeklaration: var, const, let
 
-In JavaScript, there are three keywords available to declare a variable, and each has its differences. Those are ```var```, ```let``` and ```const```.
+In Javascript gibt es drei Schlüsselworte zum Deklarieren einer Variablen, jede mit gewissen Eigenheiten. Es sind dies ```var```, ```let``` und ```const```.
 
-#### Short explanation
 
-Variables declared with ```const``` keyword can't be reassigned, while ```let``` and ```var``` can.
+#### Kurze Erklärung
 
-I recommend always declaring your variables with ```const``` by default, and with ```let``` if you need to *mutate* it or reassign it later.
+Mit ```const``` deklarierte Variablen können nicht erneut zugewiesen werden, während ```let``` und ```var``` dies gestatten.
+
+Es empfiehlt sich, Variablen grundsätzlich per ```const``` zu deklarieren und mit ```let``` nur dann, wenn man sie später neu zuweisen oder ihren Inhalt verändern will.
 
 <table>
   <tr>
     <th></th>
-    <th>Scope</th>
-    <th>Reassignable</th>
-    <th>Mutable</th>
-   <th><a href="#tdz_sample">Temporal Dead Zone</a></th>
+    <th>Geltungsbereich (Scope)</th>
+    <th>Erneut zuweisbar</th>
+    <th>Inhalt veränderbar</th>
+   <th><a href="#tdz_sample">'Zeitweilig Tote Zone'</a> <a href="https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Statements/let" title="Begriffsklärung 'Temporal Dead Zone' bei Mozilla Developer Network (deutsche Seite)">ℹ️</a> </th>
   </tr>
   <tr>
     <th>const</th>
     <td>Block</td>
-    <td>No</td>
-    <td><a href="#const_mutable_sample">Yes</a></td>
-    <td>Yes</td>
+    <td>Nein</td>
+    <td><a href="#const_mutable_sample">Ja</a></td>
+    <td>Ja</td>
   </tr>
   <tr>
     <th>let</th>
     <td>Block</td>
-    <td>Yes</td>
-    <td>Yes</td>
-    <td>Yes</td>
+    <td>Ja</td>
+    <td>Ja</td>
+    <td>Ja</td>
   </tr>
    <tr>
     <th>var</th>
     <td>Function</td>
-    <td>Yes</td>
-    <td>Yes</td>
-    <td>No</td>
+    <td>Ja</td>
+    <td>Ja</td>
+    <td>Nein</td>
   </tr>
 </table>
 
-#### Sample code
+#### Beispielquelltext
 
 ```javascript
 const person = "Nick";
-person = "John" // Will raise an error, person can't be reassigned
+person = "John" // Wird Fehler verursachen, weil der Konstanten person kein neuer Wert zugewiesen werden darf ("person can't be reassigned")
 ```
 
 ```javascript
 let person = "Nick";
 person = "John";
-console.log(person) // "John", reassignment is allowed with let
+console.log(person) // Ausgabe "John", weil bei let Neuzuweisung des Variablenwerts gestattet ist
 ```
 
 #### Detailed explanation
