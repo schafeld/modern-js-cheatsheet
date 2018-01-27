@@ -7,7 +7,7 @@
 
 ### Motivation
 
-Dieser 'Spickzettel' enthält Javascript wie es heutzutage in Projekten und Weiterbildungen häufig verwendet wird.
+Dieser 'Spickzettel' enthält Javascript wie es heutzutage in Projekten und Weiterbildungen gewöhnlich verwendet wird.
 
 Diese Anleitung ist nicht dafür gemacht, Anfängern Javascript beizubringen. Stattdessen sollen Entwickler mit vorhandenen Grundkenntnissen befähigt werden, sich anhand der verwendeten Javascript Konzepte mit modernen Programmiergrundlagen vertraut zu machen – z.B. um React zu lernen.
 
