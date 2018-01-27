@@ -175,9 +175,10 @@ person = "John";
 console.log(person) // Ausgabe "John", weil bei let Neuzuweisung des Variablenwerts gestattet ist
 ```
 
-#### Detailed explanation
+#### Ausführliche Erklärung
 
-The [*scope*](#scope_def) of a variable roughly means "where is this variable available in the code".
+Der Geltungsbereich ([*scope*](#scope_def)) einer Variablen beschreibt, einfach ausgedrückt, _wo_ eine Variable im Quelltext verwendbar ist.
+
 
 ##### var
 
