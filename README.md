@@ -671,6 +671,13 @@ const doubledNumbers = numbers.map(doubleN);
 console.log(doubledNumbers); // [0, 2, 4, 6, 8, 10, 12]
 ```
 
+**Note** : You will frequently encounter this method used in combination with [arrow functions](#-arrow-function)
+
+```js
+const doubledNumbers = numbers.map(n => n * 2);
+console.log(doubledNumbers); // [0, 2, 4, 6, 8, 10, 12]
+```
+
 ```numbers.map(doubleN)``` produces ```[doubleN(0), doubleN(1), doubleN(2), doubleN(3), doubleN(4), doubleN(5), doubleN(6)]``` which is equal to ```[0, 2, 4, 6, 8, 10, 12]```.
 
 > **Note:** If you do not need to return a new array and just want to do a loop that has side effects, you might just want to use a for / forEach loop instead of a map.
@@ -681,6 +688,13 @@ console.log(doubledNumbers); // [0, 2, 4, 6, 8, 10, 12]
 const evenNumbers = numbers.filter(function(n) {
   return n % 2 === 0; // true if "n" is par, false if "n" isn't
 });
+console.log(evenNumbers); // [0, 2, 4, 6]
+```
+
+**Note** : You will frequently encounter this method used in combination with [arrow functions](#-arrow-function)
+
+```js
+const evenNumbers = numbers.filter(n => n % 2 === 0);
 console.log(evenNumbers); // [0, 2, 4, 6]
 ```
 
@@ -698,7 +712,14 @@ const sum = numbers.reduce(
   0 // accumulator variable value at first iteration step
 );
 
-console.log(sum) //21
+console.log(sum) // 21
+```
+
+**Note** : You will frequently encounter this method used in combination with [arrow functions](#-arrow-function)
+
+```js
+const sum = numbers.reduce((acc, n) => acc + n, 0);
+console.log(sum) // 21
 ```
 
 Just like for .map and .filter methods, .reduce is applied on an array and takes a function as the first parameter.
@@ -819,7 +840,7 @@ const arr2 = [...arr1, "d", "e", "f"]; // ["a", "b", "c", "d", "e", "f"]
 
 ##### Function rest parameter
 
-In function parameters, we can use the rest operator to inject parameters into an array we can loop in. There is already an **argument** object bound to every function that is equal to an array of all the parameters passed into the function.
+In function parameters, we can use the rest operator to inject parameters into an array we can loop in. There is already an **arguments** object bound to every function that is equal to an array of all the parameters passed into the function.
 
 ```js
 function myFunc() {
@@ -1244,7 +1265,7 @@ class Person {
   }
 
   stringSentence() {
-    return "Hello, my name is " + this.name + " and I'm " + this.age;
+    return `Hello, my name is ${this.name} and I am ${this.age}`;
   }
 }
 
@@ -1347,7 +1368,7 @@ class Square extends Polygon {
 
 In addition to [Promises](#promises), there is a new syntax you might encounter to handle asynchronous code named *async / await*.
 
-The purpose of async/await functions is to simplify the behavior of using promises synchronously and to perform some behavior on a group of Promises. Just as Promises are similar to structured callbacks, async/await is similar to combining generators and promises. Async functions *always* returns a Promise. ([Ref: MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function))
+The purpose of async/await functions is to simplify the behavior of using promises synchronously and to perform some behavior on a group of Promises. Just as Promises are similar to structured callbacks, async/await is similar to combining generators and promises. Async functions *always* return a Promise. ([Ref: MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function))
 
 > **Note :** You must understand what promises are and how they work before trying to understand async / await since they rely on it.
 
@@ -1605,7 +1626,7 @@ product(downToOne(5)) // 120
 
 ### Generators
 
-Another way to write the `downToOne` function is to use a Generator. To instantiate a `Generator` object, one must use the `function *` declaration. Generators are functions that can be exited and later re-entered with its context (variable bindings) saved across re-entrances.  
+Another way to write the `downToOne` function is to use a Generator. To instantiate a `Generator` object, one must use the `function *` declaration. Generators are functions that can be exited and later re-entered with its context (variable bindings) saved across re-entrances.
 
 For example, the `downToOne` function above can be rewritten as:
 
@@ -1616,7 +1637,7 @@ function * downToOne(n) {
   }
 }
 
-[...downToOne(5)] //[ 5, 4, 3, 2, 1 ]
+[...downToOne(5)] // [ 5, 4, 3, 2, 1 ]
 ```
 
 Generators return an iterable object. When the iterator's `next()` function is called, it is executed until the first `yield` expression, which specifies the value to be returned from the iterator or with `yield*`, which delegates to another generator function. When a `return` expression is called in the generator, it will mark the generator as done and pass back as the return value. Further calls to `next()` will not return any new values.
@@ -1698,11 +1719,11 @@ class Repo{
   }
 }
 
-//Note that we did not have to create an instance of the Repo class
-console.log(Repo.getName()) //Repo name is modern-js-cheatsheet
+// Note that we did not have to create an instance of the Repo class
+console.log(Repo.getName()) // Repo name is modern-js-cheatsheet
 
 let r = new Repo();
-console.log(r.getName()) //Uncaught TypeError: repo.getName is not a function
+console.log(r.getName()) // Uncaught TypeError: r.getName is not a function
 ```
 
 #### Detailed explanation
@@ -1724,7 +1745,7 @@ class Repo{
   }
 }
 
-console.log(Repo.modifyName()) //Repo name is modern-js-cheatsheet-added-this
+console.log(Repo.modifyName()) // Repo name is modern-js-cheatsheet-added-this
 ```
 
 ##### Calling static methods from non-static methods.
@@ -1747,7 +1768,7 @@ class Repo{
 
 // we need to instantiate the class to use non-static methods
 let r = new Repo()
-console.log(r.useName()) //Repo name is modern-js-cheatsheet and it contains some really important stuff
+console.log(r.useName()) // Repo name is modern-js-cheatsheet and it contains some really important stuff
 ```
 
 2. ###### Using the constructor
@@ -1761,14 +1782,14 @@ class Repo{
   }
 
   useName(){
-    //Calls the static method as a property of the constructor
+    // Calls the static method as a property of the constructor
     return this.constructor.getName() + ' and it contains some really important stuff'
   }
 }
 
 // we need to instantiate the class to use non-static methods
 let r = new Repo()
-console.log(r.useName()) //Repo name is modern-js-cheatsheet and it contains some really important stuff
+console.log(r.useName()) // Repo name is modern-js-cheatsheet and it contains some really important stuff
 ```
 
 #### External resources
